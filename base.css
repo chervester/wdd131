@@ -1,0 +1,196 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Section Container Styles */
+.about-me, .malawi, .resources {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Creative Borders */
+.about-me {
+    border: 5px solid transparent;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #004b6f, #00aaff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.malawi {
+    border: 5px solid transparent;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #00aaff, #ffca28);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.resources {
+    border: 5px solid transparent;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #ffca28, #004b6f);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+/* Header Styles for Sections */
+.about-me h2, .malawi h2, .resources h2 {
+    font-size: 1.6em;
+    color: #004b6f;
+    margin-bottom: 10px;
+}
+
+/* Content Alignments */
+.about-content, .malawi-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.about-content img, .malawi-content img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Links in Resources */
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources ul li {
+    margin-bottom: 10px;
+}
+
+.resources ul li a {
+    color: #004b6f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.resources ul li a:hover {
+    color: #ffca28;
+}
+
+/* Navigation Styles */
+header {
+    background-color: #004b6f;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Positioning the Navigation Links Below the Heading */
+nav {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and ul */
+    align-items: center;    /* Center the content */
+    gap: 10px;              /* Space between h1 and ul */
+}
+
+nav h1 {
+    color: #ffffff;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;          /* Horizontal layout for links */
+    gap: 20px;              /* Space between the links */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #ffca28;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004b6f;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Button Styles */
+button {
+    background-color: #004b6f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00aaff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    .about-content, .malawi-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content img, .malawi-content img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    /* Make navigation links bigger on smaller screens */
+    nav ul li a {
+        font-size: 1.4em;
+    }
+}
+
+/* Hidden class for fun fact */
+.hidden {
+    display: none;
+}

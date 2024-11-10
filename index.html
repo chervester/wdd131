@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h1>WDD 131: Dynamic Web Fundamentals - Chervester Nyasulu</h1>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/chervester-nyasulu-9a572717a" target="_blank">LinkedIn Profile</a></li>
+                <li><a href="https://byui.instructure.com/" target="_blank">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <!-- About Me Section -->
+        <section class="about-me">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p id="about-text">
+                    My name is Chervester Nyasulu, and I am 28 years old from Malawi. I have a strong passion for software development and enjoy learning new technologies. I love solving problems and building projects that can help make people's lives better. I am always looking to improve my coding skills and explore new tools and languages. My goal is to create meaningful solutions that can make a positive impact in the world.
+                </p>
+                <button onclick="toggleAbout()" aria-expanded="false" aria-controls="about-text">Read More</button>
+                <img src="images/image1.jpg" alt="Profile Picture of Chervester">
+            </div>
+        </section>
+
+        <!-- Malawi Section -->
+        <section class="malawi">
+            <h2>Discover Malawi</h2>
+            <div class="malawi-content">
+                <img src="images/image2.png" alt="Flag of Malawi">
+                <p>
+                    Malawi, known as the "Warm Heart of Africa", is renowned for its stunning Lake Malawi, vibrant culture, and welcoming people. The country offers a rich blend of landscapes, from mountains to plains, and is home to unique wildlife and beautiful nature reserves.
+                </p>
+                <button onclick="displayFact()">Click for Fun Fact</button>
+                <p id="fact" class="hidden"></p>
+            </div>
+        </section>
+
+        <!-- Web Dev Resources Section -->
+        <aside class="resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="#">Digital Development Tools</a></li>
+                <li><a href="#">Creative Design Blog</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">Web Programming Tutorials</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- JavaScript for dynamic year, last modified date, and content toggle -->
+    <script>
+        // Set the current year dynamically
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+        // Set the last modified date
+        document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+
+        // Toggle "Read More" content
+        function toggleAbout() {
+            const aboutText = document.getElementById("about-text");
+            const button = document.querySelector(".about-me button");
+            
+            // Toggle visibility of the additional text
+            if (aboutText.style.maxHeight) {
+                aboutText.style.maxHeight = null;
+                button.textContent = "Read More";
+            } else {
+                aboutText.style.maxHeight = aboutText.scrollHeight + "px";
+                button.textContent = "Read Less";
+            }
+        }
+
+        // Display Fun Fact
+        function displayFact() {
+            const fact = document.getElementById("fact");
+            fact.textContent = "Fun Fact: Lake Malawi is home to more fish species than any other lake in the world!";
+            fact.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
