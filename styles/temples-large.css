@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background-color: #808080; 
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+    display: none;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+}
+
+.nav-menu li a:hover {
+    color: #f0a500; /* Optional hover effect for links */
+}
+
+/* Gallery Section (Mobile First) */
+main {
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile view */
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Ensuring all images have the same size */
+.gallery img {
+    width: 100%;
+    height: 200px; /* Set all images to the same height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+figcaption {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #808080; /* Grey color for footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles for Tablets and Desktops */
+@media (min-width: 768px) {
+    /* Header */
+    header {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Navigation Menu */
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        width: auto;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .nav-menu li {
+        margin: 0 1rem;
+    }
+
+    .nav-menu li a {
+        padding: 0;
+        text-transform: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .gallery figure {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 1200px) {
+    /* Header Styling */
+    header {
+        padding: 30px 60px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 30px;
+    }
+
+    .gallery figure {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
