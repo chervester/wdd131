@@ -54,7 +54,7 @@ const temples = [
         location: "Salt Lake City, Utah, United States",
         dedicated: "1893-04-06",
         area: 253015,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake/400x250/salt-lake-temple-exterior.jpg",
+        imageUrl: "https://churchofjesuschrist.org/imgs/e04d5651a770e152ef8f79c9d39f2fa75c900886/full/1920%2C/0/default",
     },
     {
         templeName: "Hong Kong China Temple",
@@ -68,7 +68,7 @@ const temples = [
         location: "Accra, Ghana",
         dedicated: "2004-01-11",
         area: 17000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-exterior.jpg",
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/ea817531789318cff9d81198cdc39923708b7b79/full/800%2C/0/default",
     },
 ];
 
