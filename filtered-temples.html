@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dynamically filtered picture album of temples from around the world">
+    <title>Filtered Temples</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temples</h1>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                &#9776; 
+            </button>
+            <ul class="nav-menu">
+                <li><button data-filter="home">Home</button></li>
+                <li><button data-filter="old">Old</button></li>
+                <li><button data-filter="new">New</button></li>
+                <li><button data-filter="large">Large</button></li>
+                <li><button data-filter="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Temple Picture Gallery</h2>
+        <section class="gallery" id="templeGallery">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chervester Nyasulu</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Contact: <a href="mailto:kaysnyasulu@gmail.com">kaysnyasulu@gmail.com</a></p>
+    </footer>
+</body>
+</html>
