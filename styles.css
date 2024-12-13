@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Soft blue background */
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #008080; /* Turquoise color */
+    padding: 15px 0;
+    font-size: 26px;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White form background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #008080; /* Matching label color */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light grey background for inputs */
+}
+
+textarea {
+    height: 160px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 28px;
+    color: #ff7f50; /* Coral color for rating stars */
+    transition: color 0.3s ease;
+}
+
+input[type="radio"]:checked ~ label {
+    color: #ff6347; /* Brighter coral when selected */
+}
+
+input[type="radio"]:hover ~ label,
+input[type="checkbox"]:hover {
+    color: #ff4500; /* Darker coral when hovered */
+}
+
+.checkbox-group label {
+    margin-right: 20px;
+    color: #008080; /* Matching label color */
+}
+
+input[type="submit"] {
+    background-color: #008080; /* Turquoise button */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d47; /* Darker turquoise on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+    background-color: #008080;
+    padding: 10px 0;
+    color: white;
+    border-radius: 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    form {
+        padding: 20px;
+    }
+    header {
+        font-size: 22px;
+    }
+}

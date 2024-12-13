@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <section>
+        <h2>Your review has been submitted successfully.</h2>
+        <p>Thank you for taking the time to share your feedback. We appreciate your input!</p>
+
+        <h3>Total Reviews Submitted:</h3>
+        <p id="reviewCount">0</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chervester Nyasulu, Malawi</p>
+    </footer>
+
+    <script>
+        let reviewCount = localStorage.getItem('reviewCount') || 0;
+        reviewCount = parseInt(reviewCount) + 1;
+        localStorage.setItem('reviewCount', reviewCount);
+
+        document.getElementById('reviewCount').textContent = reviewCount;
+    </script>
+</body>
+</html>
